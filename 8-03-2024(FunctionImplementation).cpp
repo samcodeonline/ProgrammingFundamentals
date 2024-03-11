@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cstdlib>
 #include <conio.h>
 using namespace std;
 //	function that is going to print only the current date.
@@ -16,6 +17,7 @@ using namespace std;
  	and i just want to deliver it i don't want something in return.
  */
 
+
 int currentDate(int current_date){
 	int date = current_date;
 	return date;
@@ -24,6 +26,14 @@ int currentDate(int current_date){
 string myName(string my_name){
 	string name = my_name ;
 	return name;
+}
+
+
+int randomValue (int num){
+	srand(0);
+	int number = rand();
+	number = num;
+	return number;
 }
 
 void greaterNumber(int number_one , int number_two){
@@ -41,11 +51,17 @@ void greaterNumber(int number_one , int number_two){
 		int number = number_one || number_two;
 		cout << "\n";
 	}
-
+ 
 int main() {
 	cout << currentDate(3) << endl;
 	cout << myName("sarimNadeem") << endl;
     greaterNumber(23,45);
+    
+//    // Get a random number
+//	int random = rand();
+//	// Print the random number
+//	cout<<random<<endl;
+	 cout << randomValue();
 	int studentCount , subjectCount;
 	cout << "No of Students: ";
 	cin >> studentCount;
