@@ -6,29 +6,25 @@ int main(){
 	cout << "\t" << "--------------------------------------------------The Random Number Game---------------------------------------------" << endl;
 	cout << "Type the Random Number(100-110): " << endl;
 	int gameNumber;
-	srand(100);
-	int saveGameNumber  = rand() % (110-100) + 100;
-	cin >> gameNumber;
-	for(int gameLoopOne = 0; gameLoopOne < 1; gameLoopOne++){
-		if(gameNumber == saveGameNumber){
-			cout << "Congratulations!!! You Won";
+	srand(109);
+	int saveRandomNumber  = rand() % (110-100) + 100;
+	int gameLoop = 0;
+	do{
+		if(gameNumber == saveRandomNumber){
+			cout << "Congratulations!! You Won";
+			break;
 //			return 0;
 		}
-		else if(gameNumber != saveGameNumber){
-			for(int gameLoopTwo = 0; gameLoopTwo < 4; gameLoopTwo++){
+		else if(gameNumber != saveRandomNumber){
+				cout << "Enter the number again :";
 				cin >> gameNumber;
-				if(gameNumber == saveGameNumber){
-				cout << "Congratulations!!! You Won";
-				return 0;
-				}
-			}
-//			return 0;
 		}
 		else{
-			cout << "You Lost";
-		}	
-//			return 0;
+			cout << "You Lost (The Expected Number was "<< saveRandomNumber;
+		}
+		gameLoop++;
 	}
+	while(gameLoop < 5);
 	return 0;
 }
 
