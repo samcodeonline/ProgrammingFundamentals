@@ -1,43 +1,28 @@
 #include <iostream>
-#include<cstdlib>
-#include <conio.h>
+#include <cstdlib>
+#include <ctime>
+
 using namespace std;
-int main(){
-	cout << "\t" << "--------------------------------------------------The Random Number Game---------------------------------------------" << endl;
-	cout << "Type the Random Number(100-110): " << endl;
-	int gameNumber;
-	srand(109);
-	int saveRandomNumber  = rand() % (110-100) + 100;
-	int gameLoop = 0;
-	do{
-		if(gameNumber == saveRandomNumber){
-			cout << "Congratulations!! You Won";
-			break;
-//			return 0;
-		}
-		else if(gameNumber != saveRandomNumber){
-				cout << "Enter the number again :";
-				cin >> gameNumber;
-		}
-		else{
-			cout << "You Lost (The Expected Number was "<< saveRandomNumber;
-		}
-		gameLoop++;
-	}
-	while(gameLoop < 5);
-	return 0;
+
+int main() {
+    cout << "\t" << "--------------------------------------------------The Random Number Game---------------------------------------------" << endl;
+    
+    srand(time(0));
+    
+    int saveRandomNumber = rand() % (110-100) + 100;
+	 
+    int enterNumber = 0;
+   	while(enterNumber < 5){
+   		cout << "Enter the number here " << enterNumber + 1  << ": ";
+   		cin >> enterNumber;
+   		if(enterNumber == saveRandomNumber){
+   			cout << "Congratulations!! You Win";
+		   }else{
+		   	cout << "The right number was this: " << saveRandomNumber ;
+		   }
+		   enterNumber++;
+	   }
+    
+    return 0;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
