@@ -8,7 +8,7 @@ int main() {
     cout << "\t" << "--------------------------------------------------The Random Number Game---------------------------------------------" << endl;
     
     srand(time(0));
-    int saveRandomNumber = rand() % (110-100) + 100;
+    int saveRandomNumber = rand() % 110;
 	int gameNumber = 0;
     int loopNumber = 0;    
     do{
