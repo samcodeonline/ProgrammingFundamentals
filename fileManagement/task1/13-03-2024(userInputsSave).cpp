@@ -29,3 +29,15 @@ int main(){
 	
 	cout << "The Read Process is Done"  << endl;
 }
+
+
+
+
+
+
+
+
+
+
+
+

@@ -19,7 +19,6 @@ int main() {
 		cin >> nameOfSubject[printSubjectName];
 	}
 	
-	
 	int marks[studentCount][subjectCount];
 
 		for(int stu=0; stu<studentCount; stu++){
@@ -38,7 +37,7 @@ int main() {
 			cout  << nameOfSubject[tableHeader] << "\t";
 			
 		}
-
+			
 			for(int stu=0; stu<studentCount; stu++){
 				cout<<"\n";      
 				cout << studentNames[stu] << "\t";
