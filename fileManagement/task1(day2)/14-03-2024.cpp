@@ -4,7 +4,8 @@ using namespace std;
 int main(){
 	cout << "\n";
 	int i = 1; 
-	while(i){
+	
+	while(i > 0){
 		cout << "Input Data" << endl;
 		string   firstName , userName , password;
 		char character;
@@ -17,6 +18,9 @@ int main(){
 		cin >> password;
 		
 		userFile << "\n";
+		int n = 0;
+		n =  i + 0;
+		userFile << n << ": ";
 		userFile << firstName << "\t\t";
 		userFile << userName << "\t\t";
 		userFile << password << "\t\t";
@@ -28,26 +32,22 @@ int main(){
 		if(character == 'y' || character == 'Y'){
 			i++;
 		}else if(character == 'n' || character == 'N'){
-		//print the table otherWise
+		//otherWise print the table 
 		ifstream userReadFile("tableData.txt");
-		cout << "\n";		    
-		string   firstName , userName , password;           
-		        while (1) {         
-		            userReadFile >> firstName >> userName >> password;              
-		            if(userReadFile.eof())          
+		cout << "\n";		               
+		        while ( 1 ){
+	            userReadFile >> n >> firstName >> userName >> password;              
+		            if(userReadFile.eof())            
+					cout << "\n";     
 		                break;              
-					cout << "\n";       
-		            cout << firstName << "  " << userName << "  " << password << "  " << " " << "\n";       
-		        }					
-				           
-		userReadFile.close();
- 		break;
-		}
-		else{
+		            cout << n << ". " << firstName << "  " << userName << "  " << password << "  " << " " << "\n";       
+		        }
+				userReadFile.close();
+				break;
+		}else{
 			cout << "invalid Character";
 			break;
 		}
-	
 	}
 	return 0;
 }
