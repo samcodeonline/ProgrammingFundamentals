@@ -20,14 +20,14 @@ int main(){
 		userFile << "\n";
 		int n = 0;
 		n =  i + 0;
-		userFile << n << ": ";
+		userFile << n << " " ;
 		userFile << firstName << "\t\t";
 		userFile << userName << "\t\t";
 		userFile << password << "\t\t";
 		
 		userFile.close();
 		
-		cout << "Do You Want more Entries or Not (Press the Key Y/N): ";
+		cout << "Do You Want more Entries or Not (Press the Key Y(Yes) / N(No)): ";
 		cin >> character;
 		if(character == 'y' || character == 'Y'){
 			i++;
@@ -38,13 +38,14 @@ int main(){
 		        while ( 1 ){
 	            userReadFile >> n >> firstName >> userName >> password;              
 		            if(userReadFile.eof())            
+		            break;              
 					cout << "\n";     
-		                break;              
-		            cout << n << ". " << firstName << "  " << userName << "  " << password << "  " << " " << "\n";       
+		            cout << n << "." << " " << firstName << "  " << userName << "  " << password << "  " << "\n";       
 		        }
-				userReadFile.close();
 				break;
-		}else{
+				userReadFile.close();
+		}
+		else{
 			cout << "invalid Character";
 			break;
 		}
