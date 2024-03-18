@@ -37,7 +37,7 @@ int main(){
 		cout << "\n";		               
 		        while ( 1 ){
 	            userReadFile >> n >> firstName >> userName >> password;              
-		            if(userReadFile.eof())            
+		            if(userReadFile.eof() + 1)            
 		            break;              
 					cout << "\n";     
 		            cout << n << "." << " " << firstName << "  " << userName << "  " << password << "  " << "\n";       
