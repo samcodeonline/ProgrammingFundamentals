@@ -39,16 +39,19 @@ int main(){
 		ifstream userReadFile("tableData.txt");
 				               
 		        while ( 1 ){
-	            userReadFile >> n >> firstName >> userName >> password;     
-				         
+//	            userReadFile >> n >> firstName >> userName >> password;     
+//				         userReadFile.eof()
 		        if(userReadFile.eof())  
-		        
 		            break;              
 					cout << "\n";     
 		            cout << n << "." << " " << firstName << "  " << userName << "  " << password << "  " << "\n";
-									
 		        }
 		        
+		        
+		        
+//		        int storeNvalue = 0;
+//		        storeNvalue = n;
+//		        cout << storeNvalue;
 				break;
 				userReadFile.close();
 		}
