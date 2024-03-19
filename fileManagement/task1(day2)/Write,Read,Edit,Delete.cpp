@@ -1,6 +1,8 @@
 #include <iostream>
 #include <fstream>
+#include <algorithm>
 using namespace std;
+//using namespace cout;
 int main(){
 	cout << "\n";
 	int i = 1; 
@@ -9,39 +11,44 @@ int main(){
 		cout << "Input Data" << endl;
 		string   firstName , userName , password;
 		char character;
-		ofstream userFile("tableData.txt" , ios::app);
-		cout << "Name: "  ;
+		ofstream userWriteFile("tableData.txt" , ios::app);
+		cout << "Name: ";
 		cin >> firstName;
 		cout << "User-Name: ";
 		cin >> userName;
 		cout << "Password: ";
 		cin >> password;
 		
-		userFile << "\n";
+		userWriteFile << "\n";
 		int n = 0;
 		n =  i + 0;
-		userFile << n << " " ;
-		userFile << firstName << "\t\t";
-		userFile << userName << "\t\t";
-		userFile << password << "\t\t";
+		userWriteFile << n << " " ;
+		userWriteFile << firstName << "\t\t";
+		userWriteFile << userName << "\t\t";
+		userWriteFile << password << "\t\t";
 		
-		userFile.close();
+		userWriteFile.close();
 		
 		cout << "Do You Want more Entries or Not (Press the Key Y(Yes) / N(No)): ";
 		cin >> character;
 		if(character == 'y' || character == 'Y'){
 			i++;
-		}else if(character == 'n' || character == 'N'){
+		}
+		else if(character == 'n' || character == 'N'){
 		//otherWise print the table 
 		ifstream userReadFile("tableData.txt");
-		cout << "\n";		               
+				               
 		        while ( 1 ){
-	            userReadFile >> n >> firstName >> userName >> password;              
-		            if(userReadFile.eof() + 1)            
+	            userReadFile >> n >> firstName >> userName >> password;     
+				         
+		        if(userReadFile.eof())  
+		        
 		            break;              
 					cout << "\n";     
-		            cout << n << "." << " " << firstName << "  " << userName << "  " << password << "  " << "\n";       
+		            cout << n << "." << " " << firstName << "  " << userName << "  " << password << "  " << "\n";
+									
 		        }
+		        
 				break;
 				userReadFile.close();
 		}

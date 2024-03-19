@@ -108,3 +108,11 @@ void search()
 
 
 }
+
+int main(){
+	
+	displayRecord();
+	updateRecord();
+	search();
+	return 0 ;
+}
