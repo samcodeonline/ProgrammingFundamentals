@@ -1,6 +1,4 @@
-sarim sar@32 3wFDSA
-asad asad@32 sfda@23
-faheem fah@23 23@faheem
-naeem nae@32 23@naee
-adan adan@33 2adnN@
-sam samcodeonline sam@32
+1 sara	sar@32	23223@
+2 ali	ali@#2	23@32
+3 yasir	yas@#2	23@3
+4 waleed	wali@32	23@#2
