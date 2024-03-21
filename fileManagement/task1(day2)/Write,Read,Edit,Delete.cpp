@@ -110,29 +110,10 @@ int main()
     userReadFile.close();
 	// open file to write the updated record
 	
-//	std::fstream s(my_file_path); // use option std::ios_base::binary if necessary
-	
-	userWriteFile.open(file_name, ios_base::binary);
-	userWriteFile.seekp(, ios_base::beg);
-	userWriteFile.write(my_data, size_of_data_to_overwrite);
-    
-    userWriteFile.close();
     
     return 0;
 }
 // end file: main.cpp
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
