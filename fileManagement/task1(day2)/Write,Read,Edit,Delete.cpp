@@ -22,7 +22,7 @@ int main()
         lastRecordNumber = a;
     }
     userReadFile.close();
-
+    
     // Open file for output.
     ofstream userWriteFile(file_name, ios::app);
     if (!userWriteFile.is_open())
@@ -110,7 +110,6 @@ int main()
     userReadFile.close();
 	// open file to write the updated record
 	
-    
     return 0;
 }
 // end file: main.cpp
