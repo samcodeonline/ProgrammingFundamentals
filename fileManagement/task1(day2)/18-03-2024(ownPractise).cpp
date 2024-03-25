@@ -152,14 +152,12 @@ void updateData() {
                 tempFile << "\n" << student.firstName;
                 tempFile << "\n" << student.userName;
                 tempFile << "\n" << student.password;
-                 
             }
             else {
                 tempFile << "\n"<< student.id;
                 tempFile << "\n"<< newData.firstName;
                 tempFile << "\n"<< newData.userName;
                 tempFile << "\n" << newData.password;
-                 
             }
         }
         read.close();
