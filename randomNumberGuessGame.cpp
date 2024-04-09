@@ -25,7 +25,7 @@ int main() {
 	}
 	while(loopNumber < 5);
 	cout << "\n";
-	if(loopNumber == 5){
+	if(loopNumber > 5){
 		cout << "The Expected Number was: " << saveRandomNumber;
 	}
     return 0;

@@ -11,7 +11,6 @@ int main() {
 	cout << "No of Subjects: ";
 	cin >> subjectCount;
 	
-	 
 	string nameOfSubject[subjectCount];
 	cout << "Enter Subject Names: " << endl;
 	for(int printSubjectName = 0 ; printSubjectName < subjectCount ; printSubjectName++){
